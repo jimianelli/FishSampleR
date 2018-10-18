@@ -1,0 +1,6 @@
+  h.haul_join=x.haul_join=l.haul_join and
+                         *
+ERROR at line 46:
+ORA-00933: SQL command not properly ended 
+
+

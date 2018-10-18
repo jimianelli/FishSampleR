@@ -1,0 +1,340 @@
+ls
+plot(1:10)
+14.6/.35
+x=1:10
+x
+x=1:1000
+write.csv("myx.csv",x)
+write.csv(x,"myx.csv")
+getwd()
+q()
+library(rsbt)
+?rsbt
+q()
+require(PBSmodelling)
+library(rsbt)
+?rsbt
+q()
+require(PBSmodelling)
+library(rsbt)
+?rsbt
+q()
+ls()
+x=1:100
+stats::quantile(x)
+stats::quantile(x,p=c(.2,.5))
+stats::quantile(x,p=c(.2,.q5))
+q()
+stats::quantile(x,p=c(.2,.q5))
+ls()
+q()
+rm(list=ls())
+require(PBSmodelling)
+library(devtools)
+install_github(repo="cran/PBSmodelling")
+install_github(repo="cran/PBSadmb")
+require(PBSmodelling)
+source(paste(fndir,"read-admb",sep=""))
+fndir<- "/Users/jim/Dropbox/R_common/"
+outdir="/Users/jim/OneDrive/ebswp/prg/"
+Figdir="/Users/jim/OneDrive/ebswp/prg/figs/"
+source(paste(fndir,"adfunctions.r",sep=""))
+source(paste(fndir,"read-admb",sep=""))
+source(paste(fndir,"read-admb.r",sep=""))
+source(paste("adfunctions2.r",sep=""))
+source("af.r")
+getwd()
+ls()
+read_admb(paste(outdir,"arc/mod0.4_for_R.rep",sep=""))
+read_admb
+read_rep(paste(outdir,"arc/mod0.4_for_R.rep",sep=""))
+q()
+ls()
+require(PBSadmb)
+q()
+library(gmr)
+q()
+ls
+ls9)
+ls()
+q
+q()
+library("devtools")
+install_github("kaskr/adcomp/TMB") #
+# source script to get INLA from the web#
+source("http://www.math.ntnu.no/inla/givemeINLA.R")
+install_github("james-thorson/SpatialDFA", auth_token="918291a743d6fe53aecec3bfc4a27d2b850c688d")
+install_github("james-thorson/Spatial_DFA", auth_token="918291a743d6fe53aecec3bfc4a27d2b850c688d")
+library(SpatialDFA)
+q()
+library(gmr)
+library(dplyr)
+library(reshape2)
+library(ggplot2)
+library(MASS)
+q()
+library(dplyr)
+library(reshape2)
+library(ggplot2)
+.OVERLAY  = TRUE
+.PWD      = "/Users/Jim/_mymods/seacode/gmacs/Rsrc/R4GMACS"
+.LIB      = "./LIB"
+.RFILES   = list.files(.LIB,pattern="\\.[Rr]$")
+q()
+library(TMB)
+?TMB
+??TMB
+load("/Users/jim/_mymods/kaskr/adcomp/admb_examples/sam.output.RData")
+ls()
+cmd1
+cmd2
+rep
+ls
+ls()
+tim2
+tim1
+load("/Users/jim/_mymods/kaskr/adcomp/tmb_examples/sam.output.RData")
+ls
+ls()
+tim2
+tim 1
+tim1
+q()
+install.packages("knitR")
+install.packages("knitr")
+install.packages("")
+library(devtools)
+install_github("flr/FLCore")
+install_github("wgmg/msy")
+library(msy)
+FIT <- eqsr_fit(icesStocks$codNS,
+nsamp = 1000,
+models = c("Ricker", "Smooth_hockey", "Bevholt"))
+install_github("einarhjorleifsson/msy")
+library(msy)
+FIT <- eqsr_fit(icesStocks$codNS, nsamp = 1000, models = c("Ricker", "Smooth_hockey", "Bevholt"))
+FIT <- eqsr_fit(icesStocks$codNS, nsamp = 1000, models = c("Ricker", "Bevholt"))
+eqsr_plot(FIT,n=2e4)
+SIM <- eqsim_run(FIT, Fcv=0.25, Fphi=0.30, Blim=70000,Bpa=150000, Fscan = seq(0,1.2,len=40), verbose=FALSE)
+SIM$Refs
+eqsim_plot(SIM,catch=TRUE)
+eqsim_plot_range(SIM)
+?icesStocks
+eqsim_ggplot(SIM, Scale = 1, plotit = TRUE)
+eqsim_ggplot(SIM, Scale = 2, plotit = TRUE)
+eqsim_ggplot(SIM, Scale = .1, plotit = TRUE)
+eqsim_ggplot(SIM, Scale = 1, plotit = TRUE)
+icesStocks
+names(icesStocks)
+?eqsim_run
+FITis <- eqsr_fit(icesStocks$codIS, nsamp = 1000, models = c("Ricker", "Bevholt"))
+eqsr_plot(FITis,n=2e4)
+SIM <- eqsim_run(FITis, Fcv=0.25, Fphi=0.30, Blim=70000,Bpa=150000, Fscan = seq(0,1.2,len=40), verbose=FALSE)
+SIMis <- eqsim_run(FITis, Fcv=0.25, Fphi=0.30, Blim=70000,Bpa=150000, Fscan = seq(0,1.2,len=40), verbose=FALSE)
+SIM <- eqsim_run(FIT, Fcv=0.25, Fphi=0.30, Blim=70000,Bpa=150000, Fscan = seq(0,1.2,len=40), verbose=FALSE)
+eqsim_plot(SIMis,catch=TRUE)
+eqsim_plot_range(SIMis)
+require(gmr)
+.MODELDIR = c("")
+.THEME    = theme_bw(base_size = 12, base_family = "")
+.OVERLAY  = TRUE
+.SEX      = c("Aggregate","Male","Female")
+.FLEET    = c("Pot","Trawl bycatch","NMFS Trawl","BSFRF")
+.TYPE     = c("Retained & Discarded","Retained","Discarded")
+.SHELL    = c("Aggregate","New Shell","Old Shell")
+.MATURITY = c("Aggregate","Immature","Mature")
+.SEAS     = c("Annual")
+.FIGS     = c("figure/")
+fn       <- paste0(.MODELDIR, "gmacs")
+getwd()
+print(fn)
+print(.FIGS)
+print(.MODELDIR)
+names(M) <- basename(.MODELDIR)
+M        <- lapply(fn, read_admb)
+ww <- 6
+hh <- 5
+png(paste0(.FIGS, "catch.png"), width = ww*1.2, height = hh*1.2)
+plot_catch(M)
+fn       <- paste0(.MODELDIR, "gmacs")
+getwd()
+print(fn)
+print(.FIGS)
+print(.MODELDIR)
+M        <- lapply(fn, read_admb)
+names(M) <- basename(.MODELDIR)
+q()
+Week = c(rep(1:8,2))#
+Total = rnorm(16,1000,600)#
+Alarm = c(rep("BELTWEIGHER HIGH HIGH",8), rep("MICROWAVE LHS",8))#
+spark <- data.frame(Week, Alarm, Total)#
+s <- ggplot(spark, aes(Week, Total)) +         #
+     theme(#
+        panel.background = element_rect(size = 1, colour = "lightgray"),#
+        panel.grid.major = element_blank(),#
+        panel.grid.minor = element_blank(),#
+        axis.line = element_blank(),#
+        axis.text.x = element_blank(),#
+        axis.text.y = element_blank(),#
+        axis.title.x = element_blank(),#
+        axis.title.y = element_blank(), #
+        axis.ticks = element_blank(),#
+        strip.background = element_blank(),#
+        strip.text.y = element_blank()#
+        #strip.text.y = element_text(size = 7, colour = "red", angle = 90)#
+    )#
+#
+s + facet_grid(Alarm ~.) + geom_line()
+library(ggplot2)
+Week = c(rep(1:8,2))#
+Total = rnorm(16,1000,600)#
+Alarm = c(rep("BELTWEIGHER HIGH HIGH",8), rep("MICROWAVE LHS",8))#
+spark <- data.frame(Week, Alarm, Total)#
+s <- ggplot(spark, aes(Week, Total)) +         #
+     theme(#
+        panel.background = element_rect(size = 1, colour = "lightgray"),#
+        panel.grid.major = element_blank(),#
+        panel.grid.minor = element_blank(),#
+        axis.line = element_blank(),#
+        axis.text.x = element_blank(),#
+        axis.text.y = element_blank(),#
+        axis.title.x = element_blank(),#
+        axis.title.y = element_blank(), #
+        axis.ticks = element_blank(),#
+        strip.background = element_blank(),#
+        strip.text.y = element_blank()#
+        #strip.text.y = element_text(size = 7, colour = "red", angle = 90)#
+    )#
+#
+s + facet_grid(Alarm ~.) + geom_line()
+sparkLinePlot <- function(df, plot.file) {#
+#
+  highest <- subset(df, outcomes == max(outcomes))#
+  lowest <- subset(df, outcomes == min(outcomes))#
+#
+  p <- ggplot(df, aes(x=date, y=outcomes)) +#
+       geom_line() +#
+       opts(panel.border = theme_rect(linetype = 0),#
+            panel.background = theme_rect(colour = "white"),#
+            panel.grid.major = theme_blank(),#
+            panel.grid.minor = theme_blank(),#
+            axis.text.x = theme_blank(),#
+            axis.text.y = theme_blank(),#
+            axis.ticks = theme_blank()) +#
+       ylab("") +#
+       geom_point(data = lowest, size = 3, colour = alpha("red", 0.5)) +#
+       geom_point(data = highest, size = 3, colour = alpha("blue", 0.5)) +#
+       scale_y_continuous(formatter = comma) +#
+       scale_x_date(name = "", major="months", minor="weeks", format="%b-%d")#
+#
+  ggsave(file = paste(plot.file, ".svg", sep=""), width = 3, height = 2)#
+#
+}
+ls()
+??sparktex
+getwd()
+q()
+set.seed(3999)
+# Test script for spatial model at equilibrium.
+m       <- 0.6
+fe      <- 0.35
+s       <- exp(-m)
+narea   <- 3
+# Gravity model for movement matrix
+gw      <- rnorm(narea)
+res     <- 3.9
+G       <- matrix(gw,narea,narea,byrow=TRUE)
+diag(G) <- diag(G) + res
+G       <- exp(G)
+A       <- (G)/rowSums(G)
+I       <- diag(narea)
+# i index for age
+# j index for arrea
+Ro <- 1.0
+r  <- exp(rnorm(narea))
+rj <- Ro * r/sum(r)
+# survivorship
+nage <- 7
+age  <- 1:nage
+wa   <- (1-exp(-1.5*m*age))^3
+fa   <- plogis(age,3,0.2)*wa
+lx   <- exp(-m)^(age-1)
+lx[nage] <- lx[nage]/(1.-exp(-m))
+phi.E    <- as.double(lx %*% fa)
+# equilibrium soln. for unfished conditions.
+Ne = -solve((A*s)-I,rj)
+cat("Equilibrium soln. \n",Ne)
+Nij <- matrix(0,nage,narea)
+for(i in 1:nage)
+{#
+        if(i == 1)#
+        {#
+            Nij[i,] = rj #
+        }#
+        if(i < nage)#
+        {#
+            Nij[i+1,] = (A*s) %*% (Nij[i,])#
+        }#
+#
+        # equilibrium soln for plus group.#
+        # assume Z & A same for age A and older.#
+        if(i == nage)#
+        {#
+            Nij[i,] = -solve((A*s)-I,Nij[i,])#
+        }#
+    }
+cat("\nNumerical\n",colSums(Nij))
+# Unfished spawning biomass
+Be  = colSums(Nij*fa)
+# Add area specific fishing mortlaity.
+sel = plogis(age,2,0.5)
+fj  = rep(fe,length=narea)
+Nij <- matrix(0,nage,narea)
+for(i in 1:nage)
+{#
+        if(i == 1)#
+        {#
+            Nij[i,] = rj #
+        }#
+        z = m + fj * sel[i]#
+        if(i < nage)#
+        {#
+            Nij[i+1,] = (A*exp(-z)) %*% (Nij[i,])#
+        }#
+#
+        # equilibrium soln for plus group.#
+        # assume Z & A same for age A and older.#
+        if(i == nage)#
+        {#
+            Nij[i,] = -solve((A*exp(-z))-I,Nij[i,])#
+        }#
+    }
+Bf = colSums(Nij*fa)
+SPR <- Bf/Be
+SPR
+fa
+Nig
+Nij
+q()
+ggplot(cpu,aes(x=yr,y=cpue)) + geom_smooth(se=T) + geom_point(size=5) + ggtitle(title) + scale_x_continuous(breaks=2003:20014) + labs(x="Year",y="CPUE") +
+mytheme + scale_y_continuous(limits=c(0,9e3))
+ggplot(cpu,aes(x=yr,y=cpue)) + geom_smooth(se=F) + geom_point(size=5) + ggtitle(title) + scale_x_continuous(breaks=2003:20014) + labs(x="Year",y="CPUE") +
+mytheme + scale_y_continuous(limits=c(0,9e3))
+q()
+library(ggplot2)
+library(reshape2)
+library(lubridate)
+library(plyr)
+library(tidyr)
+setwd("~/Onedrive/ebswp/data/sampler/ebswp")
+cdf <- read.table("catage_all_str.csv",header=T)
+cdf <- read.table("catage_all.csv",header=F)
+cdf <- data.frame(cdf)
+names(cdf) <- c("yr","sim",1:15)
+tdf <- gather(cdf,Age,catch,3:17) %>% filter(as.integer(Age)>2,as.integer(Age)<11) %>% transmute(yr,sim,Age,catch,cohort=as.factor(yr-as.integer(Age)))
+tdf$yr <- factor(tdf$yr,levels=c(seq(from=1991,to=2011,by=5),seq(from=1992,to=2012,by=5),seq(from=1993,to=2013,by=5),seq(from=1994,to=2014,by=5),seq(from=1995,to=2015,by=5)))
+tbl_df(cdf)
+tbl_df
+cdf <- read.table("catage_all_str.csv",header=T)
+names(cdf) <- c("yr","sim",1:15)
+tbl_df(cdf)

@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1502431195872.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1424313990",
+    "id" : "FB57606F",
+    "lastKnownWriteTime" : 1510538999,
+    "last_content_update" : 1510538999,
+    "path" : "~/OneDrive/sampler/cases/ebswp/EBS_sampler.R",
+    "project_path" : "EBS_sampler.R",
+    "properties" : {
+        "cursorPosition" : "34,0",
+        "marks" : "<:0,0\n>:0,0",
+        "scrollLine" : "16"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
